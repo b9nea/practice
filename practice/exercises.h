@@ -17,6 +17,10 @@ namespace chFour {
 	int chFourMain();
 }
 
+namespace chFive {
+	int chFiveMain();
+}
+
 namespace chSix {
 	int chSix_OneMain();
 	int chSix_TwoMain();

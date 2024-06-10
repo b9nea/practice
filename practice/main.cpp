@@ -9,7 +9,7 @@
 *	данный файл следует игнорировать */
 
 const std::string g_theor_msg{ "У этого задания была только "
-							   "теоретическая часть.\n" };
+							   "теоретическая часть.\n\n" };
 const std::string g_mult_msg{ "У этого решения несколько подзаданий. Они "
 							   "будут выполняться последовательно.\n\n" };
 
@@ -57,6 +57,7 @@ void getAnswer(int numberOfExercise) {
 		break;
 	case 5:
 		std::cout << g_theor_msg;
+		chFive::chFiveMain();
 		break;
 	case 6:
 		std::cout << g_mult_msg;
@@ -110,9 +111,13 @@ int main() {
 	std::setlocale(LC_ALL, "Russian");
 
 	std::cout << "На данный момент готово 11 заданий.\n";
+
+	while (true)
+	{
 	std::cout << "Введите номер задания: ";
 	int numOfEx{ getNumOfEx() };
 
 	std::cout << std::endl;
 	getAnswer(numOfEx);
+	}
 }
